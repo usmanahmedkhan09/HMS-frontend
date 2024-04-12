@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const menu1 = [
+const routes = [
   {
     label: 'Admin',
     active: false,
@@ -23,16 +23,27 @@ const menu1 = [
 </script>
 
 <template>
-  <div class="flex">
-    <div class="w-1/6">
-      <aside class="h-screen bg-primary-500">
-        <x-menu :items="menu1" class="text-white" />
+  <div class="flex h-screen">
+    <!-- Sidebar -->
+    <div class="w-1/6 bg-primary-500">
+      <aside class="h-full">
+        <x-menu :items="routes" class="text-white" />
       </aside>
-      <header></header>
     </div>
 
-    <main class="border-3 w-full h-screen">
-      <router-view></router-view>
-    </main>
+    <!-- Main Content -->
+    <div class="flex flex-col w-full">
+      <!-- Header -->
+      <header
+        class="sticky top-0 z-40 flex h-[6rem] w-full shrink-0 items-center border-b-2 border-gray-300 bg-white shadow-gray-500"
+      >
+        <!-- Header content goes here -->
+      </header>
+
+      <!-- Main Content Area -->
+      <main class="flex-grow border-3 p-10 flex-1 w-full mx-auto md:px-6 lg:px-8 max-w-full">
+        <router-view></router-view>
+      </main>
+    </div>
   </div>
 </template>

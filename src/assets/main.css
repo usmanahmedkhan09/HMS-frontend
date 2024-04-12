@@ -6,33 +6,34 @@
 
 
 *,
-*::before,
-*::after {
-    box-sizing: border-box;
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  border-width: 0;
+  border-style: solid;
+  }
+  
+  
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
     margin: 0;
-}
-
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-     -webkit-appearance: none;
-     margin: 0;
-}
-
-
-html {
-  height: 100vh;
-  font-size: 62.5%;
- 
-}
-
-body {
-  width: 100%;
-  height: 100%;
-  font-family: 'poppins', sans-serif;
-  font-size: 1.6rem;
-
-}
+  }
+  
+  
+  html {
+    height: 100vh;
+    font-size: 62.5%;
+    
+  }
+  
+  body {
+    width: 100%;
+    height: 100%;
+    font-family: 'poppins', sans-serif;
+    font-size: 1.6rem;
+  }
 
 #app {
   height: 100%;
@@ -44,6 +45,9 @@ a {
   color: inherit;
 }
 
+.x-menu {
+  border: none !important;
+}
 .x-menu .x-menu-item {
   padding: 10px;
   background-color: none;
@@ -64,3 +68,6 @@ a {
   background-color: rgb(19 85 122 / 1)!important;
 }
 
+.x-divider > div {
+  background-color : #ddd !important;
+}

@@ -1,10 +1,10 @@
 
 
+/** @type {import('tailwindcss').Config} */
 // tailwind.config.js
-const colors = require('tailwindcss/colors')
-const indielayer = require('@indielayer/ui/tailwind.preset')
+import indielayer from '@indielayer/ui/tailwind.preset'
 
-module.exports = {
+export default {
   darkMode: 'class',
   // load indielayer ui presets
   presets: [indielayer()],
@@ -13,6 +13,7 @@ module.exports = {
     './index.html',
     './**/*.vue',
     './src/**/*.{vue,js,ts,jsx,tsx}',
+    'node_modules/@indielayer/ui/**/*',
     'node_modules/@indielayer/ui/{lib,src}/**/*',
   ],
   theme: {
